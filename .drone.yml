@@ -1,0 +1,8 @@
+pipeline:
+  compile_production:
+    image: plugins/docker
+    repo: registry.finantic.co:5000/finantic/taiga-back
+    username: finantic
+    password: F1n@nt1c
+    registry: registry.finantic.co:5000
+    tags: [ latest ]
