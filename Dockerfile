@@ -8,6 +8,7 @@ RUN apk add --no-cache autoconf
 RUN apk add --no-cache flex
 RUN apk add --no-cache bison
 RUN apk add --no-cache jpeg-dev
+RUN apk add --no-cache py-setuptools
 RUN apk add --no-cache libxml2-dev
 RUN apk add --no-cache py-lxml
 RUN apk add --no-cache libxslt-dev
