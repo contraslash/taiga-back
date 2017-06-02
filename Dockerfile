@@ -3,6 +3,7 @@ RUN apk update
 RUN apk add --no-cache binutils
 RUN apk add --no-cache gcc
 RUN apk add --no-cache musl-dev
+RUN apk add --no-cache cython-dev
 RUN apk add --no-cache autoconf
 RUN apk add --no-cache flex
 RUN apk add --no-cache bison
