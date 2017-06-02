@@ -8,6 +8,7 @@ RUN apk add --no-cache flex
 RUN apk add --no-cache bison
 RUN apk add --no-cache jpeg-dev
 RUN apk add --no-cache libxml2-dev
+RUN apk add --no-cache libxslt-dev
 RUN apk add --no-cache freetype-dev
 RUN apk add --no-cache zlib-dev
 RUN apk add --no-cache zeromq-dev
