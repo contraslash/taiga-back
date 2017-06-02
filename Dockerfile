@@ -20,6 +20,7 @@ RUN apk add --no-cache git
 RUN apk add --no-cache tmux
 RUN apk add --no-cache gettext
 RUN apk add --no-cache postgresql
+RUN apk add --no-cache postgresql-dev
 RUN apk add --no-cache postgresql-contrib
 RUN apk add --no-cache postgresql-client
 
