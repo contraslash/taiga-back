@@ -25,6 +25,7 @@ RUN apk add --no-cache postgresql-client
 
 RUN mkdir /code
 WORKDIR /code
+ADD requirements.txt /code/
 ADD settings/local.py.example /code/settings/local.py
 RUN pip install -r requirements.txt
 ADD . /code/
