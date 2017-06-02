@@ -7,7 +7,7 @@ RUN apk add --no-cache autoconf
 RUN apk add --no-cache flex
 RUN apk add --no-cache bison
 RUN apk add --no-cache jpeg-dev
-RUN apk add --no-cache freetype6-dev
+RUN apk add --no-cache freetype-dev
 RUN apk add --no-cache zlib-dev
 RUN apk add --no-cache zeromq-dev
 RUN apk add --no-cache gdbm-dev
@@ -23,13 +23,14 @@ RUN apk add --no-cache postgresql
 RUN apk add --no-cache postgresql-contrib
 RUN apk add --no-cache postgresql-client
 
-RUN mkdir /code
-WORKDIR /code
-ADD requirements_prod.txt /code/
-ADD settings/local.py.example /code/settings/local.py
-RUN pip install -r requirements.txt
-ADD . /code/
+#RUN mkdir /code
+#WORKDIR /code
+#ADD requirements_prod.txt /code/
+#ADD settings/local.py.example /code/settings/local.py
+#RUN pip install -r requirements.txt
+#ADD . /code/
 
 EXPOSE 8000
 
-CMD ["python3" "manage.py" "runserver"]
+#CMD ["python3" "manage.py" "runserver"]
+CMD ["python3"]
