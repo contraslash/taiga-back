@@ -1,5 +1,6 @@
 FROM python:3.6-alpine
 RUN apk update
+RUN apk add --no-cache linux-headers
 RUN apk add --no-cache binutils
 RUN apk add --no-cache gcc
 RUN apk add --no-cache musl-dev
@@ -29,12 +30,14 @@ RUN apk add --no-cache postgresql
 RUN apk add --no-cache postgresql-dev
 RUN apk add --no-cache postgresql-contrib
 RUN apk add --no-cache postgresql-client
+RUN apk add --no-cache uwsgi
+RUN apk add --no-cache uwsgi-python
 
 RUN mkdir /code
 WORKDIR /code
 ADD requirements.txt /code/
-ADD settings/local.py.example /code/settings/local.py
 RUN pip install -r requirements.txt
+ADD settings/local.py.example /code/settings/local.py
 ADD . /code/
 
 
